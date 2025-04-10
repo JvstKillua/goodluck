@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Semangat Belajar!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .quote-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-width: 400px;
+      text-align: center;
+    }
+
+    #quote {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Semangat Belajar!</h1>
+  <div class="quote-box">
+    <p id="quote">Klik tombol di bawah buat dapat motivasi!</p>
+    <button onclick="generateQuote()">Dapatkan Semangat!</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Jangan takut gagal, takutlah untuk tidak mencoba.",
+      "Setiap usaha tidak akan mengkhianati hasil.",
+      "Hari ini mungkin sulit, tapi besok kamu akan bangga.",
+      "Belajar itu investasi terbaik untuk masa depanmu.",
+      "Semangat terus! Kamu lebih kuat dari yang kamu kira."
+    ];
+
+    function generateQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[random];
+    }
+  </script>
+
+</body>
+</html>
